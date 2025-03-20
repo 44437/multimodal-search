@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    environment:
+      APP_ENV: dev
+    ports:
+      - 3030:3030
