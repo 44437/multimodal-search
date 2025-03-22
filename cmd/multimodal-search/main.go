@@ -4,7 +4,7 @@ import (
 	"log"
 	"multimodal-search/internal/config"
 	"multimodal-search/internal/server"
-	"multimodal-search/internal/temp"
+	"multimodal-search/internal/multimodal"
 	"os"
 
 	"go.uber.org/zap"
@@ -21,7 +21,7 @@ func main() {
 	}
 	conf.Print()
 
-	handler := temp.NewHandler(temp.NewService(temp.NewRepository(conf.Weaviate)))
+	handler := multimodal.NewHandler(multimodal.NewService(multimodal.NewRepository(conf.Weaviate)))
 
 	handlers := []server.Handler{handler}
 
