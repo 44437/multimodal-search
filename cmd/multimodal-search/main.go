@@ -21,7 +21,7 @@ func main() {
 	}
 	conf.Print()
 
-	handler := temp.NewHandler(temp.NewService(temp.NewRepository()))
+	handler := temp.NewHandler(temp.NewService(temp.NewRepository(conf.Weaviate)))
 
 	handlers := []server.Handler{handler}
 

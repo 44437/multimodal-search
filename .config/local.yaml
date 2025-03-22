@@ -1,2 +1,5 @@
 server:
   port: 3030
+weaviate:
+  host: "localhost:8080"
+  schema: "http"

@@ -7,11 +7,17 @@ import (
 )
 
 type Config struct {
-	Server Server
+	Server   Server
+	Weaviate Weaviate
 }
 
 type Server struct {
 	Port int
+}
+
+type Weaviate struct {
+	Host   string
+	Schema string
 }
 
 func New(configPath, configName string) (*Config, error) {
